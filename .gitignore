@@ -1,5 +1,4 @@
 node_modules
 *.log
-*.vsix
 .vscode/settings.json
 out
