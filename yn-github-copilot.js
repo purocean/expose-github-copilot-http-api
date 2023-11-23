@@ -1,8 +1,7 @@
-const extensionId = 'yank-note-github-copilot'
-
 window.registerPlugin({
-  name: extensionId,
+  name: 'yank-note-github-copilot',
   register: ctx => {
+    const extensionId = 'yank-note-github-copilot'
     const enabled = ctx.lib.vue.ref(ctx.storage.get(`${extensionId}.enabled`) || true)
     const loading = ctx.lib.vue.ref(false)
 
