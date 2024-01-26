@@ -2,7 +2,14 @@ const fs = require('fs');
 const path = process.argv[2];
 
 const js = fs.readFileSync(path, 'utf8');
-const apiReg = /class\{constructor\([^)]+\)\{[^}]+\}[^}]+CopilotExtensionApi/;
+
+const matches = js.match(/\(([a-zA-Z]+),"CopilotExtensionApi"\)/);
+if (!matches) {
+  throw new Error('Could not find extension api constructor [calculateInlineCompletions]');
+}
+
+const apiName = matches[1];
+const apiReg = new RegExp(`var ${apiName}=class ${apiName}\\{constructor\\([a-zA-Z]\\)\\{this.ctx=`);
 
 if (!fs.existsSync(path + '.bak')) {
   fs.copyFileSync(path, path + '.bak');
