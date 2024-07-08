@@ -24,7 +24,7 @@ const replaced = js.replace(apiReg, (match) => {
     throw new Error('Could not find extension api constructor [this.ctx=]');
   }
 
-  const matches = js.match(/\(([a-zA-Z]+),"calculateInlineCompletions"\)/);
+  const matches = js.match(/\(([a-zA-Z0-9]+),"calculateInlineCompletions"\)/);
   if (!matches) {
     throw new Error('Could not find extension api constructor [calculateInlineCompletions]');
   }
