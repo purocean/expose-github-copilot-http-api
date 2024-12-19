@@ -3,7 +3,7 @@ const path = process.argv[2];
 
 const js = fs.readFileSync(path, 'utf8');
 
-const matches = js.match(/\(([a-zA-Z]+),"CopilotExtensionApi"\)/);
+const matches = js.match(/\(([a-zA-Z]+),"VSCodeCopilotExtensionApi"\)/);
 if (!matches) {
   throw new Error('Could not find extension api constructor [calculateInlineCompletions]');
 }
