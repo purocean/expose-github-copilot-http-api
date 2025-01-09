@@ -1,3 +1,6 @@
+// 这个文件不建议使用，现在 Yank Note 的 AI copilot 扩展已经自带这个适配器了，写上接口地址即可工作
+// https://github.com/purocean/yank-note-extension/tree/main/packages/extension-ai-copilot
+
 window.registerPlugin({
   name: 'yank-note-github-copilot',
   register: ctx => {
