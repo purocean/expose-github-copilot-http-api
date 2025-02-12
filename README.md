@@ -4,6 +4,9 @@
 
 参考文章：https://blog-purocean.vercel.app/hack-github-copilot/
 
+> [!NOTE]
+> 现在而今眼目下，Gthub Copilot 开放了很多，比如可以通过 https://www.npmjs.com/package/@github/copilot-language-server 来接入，本方法虽然可用（2025-02-12），但不建议再使用了
+
 <img width="893" alt="image" src="https://github.com/purocean/expose-github-copilot-http-api/assets/7115690/ad2c7c5c-eed2-44c2-b90d-9e0715c18aaa">
 
 ## Yank Note
